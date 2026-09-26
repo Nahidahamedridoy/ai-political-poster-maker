@@ -14,11 +14,11 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+    <nav className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="font-bold text-2xl text-green-800 tracking-tight">
+            <Link href="/" className="font-bold text-2xl text-primary tracking-tight">
               PosterAI
             </Link>
           </div>
@@ -29,7 +29,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-slate-600 hover:text-green-700 font-medium transition-colors"
+                className="text-muted hover:text-primary font-medium transition-colors"
               >
                 {item.name}
               </Link>
@@ -37,10 +37,10 @@ export default function Navbar() {
           </div>
 
           <div className="hidden sm:flex sm:items-center sm:space-x-4">
-            <Link href="/login" className="text-slate-600 hover:text-green-700 font-medium">
+            <Link href="/login" className="text-muted hover:text-primary font-medium">
               Login
             </Link>
-            <Button as={Link} color="success" href="/create" variant="flat" className="font-semibold bg-green-100 text-green-800">
+            <Button as={Link} href="/create" className="bg-primary text-white font-semibold hover:bg-primary/90 shadow-sm">
               Create Poster
             </Button>
           </div>
@@ -50,7 +50,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100"
+              className="inline-flex items-center justify-center p-2 rounded-md text-muted hover:text-primary hover:bg-base"
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
@@ -69,13 +69,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="sm:hidden bg-white border-t border-slate-200">
+        <div className="sm:hidden bg-white border-t border-slate-100 shadow-lg pb-4">
           <div className="pt-2 pb-3 space-y-1">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block pl-6 pr-4 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-green-700"
+                className="block pl-6 pr-4 py-2 text-base font-medium text-main hover:bg-base hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
@@ -83,13 +83,13 @@ export default function Navbar() {
             ))}
             <Link
               href="/login"
-              className="block pl-6 pr-4 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-green-700"
+              className="block pl-6 pr-4 py-2 text-base font-medium text-main hover:bg-base hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Login
             </Link>
             <div className="pl-6 pr-4 py-3">
-              <Button as={Link} color="success" href="/create" className="w-full font-semibold">
+              <Button as={Link} href="/create" className="w-full bg-primary text-white font-semibold hover:bg-primary/90">
                 Create Poster
               </Button>
             </div>

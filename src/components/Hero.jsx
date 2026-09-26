@@ -5,24 +5,24 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-slate-50 pt-16 md:pt-24 pb-32">
+    <section className="relative overflow-hidden bg-base pt-16 md:pt-24 pb-32">
       {/* Background decoration */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-green-50 to-transparent pointer-events-none -z-10"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-primary/5 to-transparent pointer-events-none -z-10"></div>
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
         {/* Text Content */}
         <div className="max-w-2xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6">
-            Create Beautiful <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-green-500">Posters with AI</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-main mb-6">
+            Create Beautiful <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80">Posters with AI</span>
           </h1>
-          <p className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted mb-8 leading-relaxed">
             Design polished Bangla posters for celebrations, tributes, community events, and announcements with AI-assisted layouts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button as={Link} href="/create" color="success" size="lg" className="font-semibold shadow-lg shadow-green-500/30">
+            <Button as={Link} href="/create" size="lg" className="bg-primary text-white font-semibold shadow-lg shadow-primary/20 hover:bg-primary/90">
               Create Your Poster
             </Button>
-            <Button as={Link} href="/templates" variant="bordered" size="lg" className="font-semibold border-slate-300 text-slate-700 hover:bg-slate-100">
+            <Button as={Link} href="/templates" variant="bordered" size="lg" className="font-semibold bg-white border-primary/20 text-primary hover:bg-primary/5 hover:border-primary/30">
               Explore Templates
             </Button>
           </div>

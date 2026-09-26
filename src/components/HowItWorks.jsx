@@ -26,8 +26,8 @@ export default function HowItWorks() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">How It Works</h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-primary mb-4">How It Works</h2>
+          <p className="text-muted max-w-2xl mx-auto">
             Create professional posters in four simple steps without any design experience.
           </p>
         </div>
@@ -35,12 +35,12 @@ export default function HowItWorks() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative group">
-              <div className="bg-slate-50 rounded-2xl p-8 h-full border border-slate-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div className="text-4xl font-black text-green-100 group-hover:text-green-200 mb-6 transition-colors">
+              <div className="bg-white rounded-2xl p-8 h-full border border-slate-100 hover:shadow-lg shadow-sm transition-all duration-300 hover:-translate-y-1">
+                <div className="text-4xl font-black text-primary/10 group-hover:text-accent/40 mb-6 transition-colors">
                   {step.num}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{step.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-main mb-3">{step.title}</h3>
+                <p className="text-muted text-sm leading-relaxed">
                   {step.description}
                 </p>
               </div>

@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
 @theme {
+  --color-primary: #123C3A;
+  --color-accent: #D97706;
+  --color-base: #F8FAF9;
+  --color-main: #17211F;
+  --color-muted: #64706D;
+
   --animate-shimmer: shimmer 1.5s infinite;
   --keyframes-shimmer: {
     "100%": {
